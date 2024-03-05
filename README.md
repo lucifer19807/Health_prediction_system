@@ -6,7 +6,9 @@
 
 To download the skin cancer detection model, please visit the following Google Drive link:
 
-[Skin Cancer Detection Model](insert_google_drive_link_here)
+[Skin Cancer Detection Model](https://drive.google.com/file/d/1w1NWTaQRcLj0PgwG--h7r2lqdTZUBpcK/view?usp=sharing)
+
+And  this into SkinCancer  Directory after cloning it
 
 After downloading the model, place it in the appropriate directory as instructed in the project documentation.
 
