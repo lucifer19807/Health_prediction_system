@@ -6,17 +6,41 @@ import io
 import cv2
 import tensorflow as tf
 from keras.models import load_model
+from tensorflow.keras.applications.efficientnet import preprocess_input
 
 app = Flask(__name__)
 
 # Load models
 tuberculosis_model = tf.keras.models.load_model('../Tuberculosis_model/my_model1')
-Skin_cancer_model = load_model('../SkinCancer/Skin_Cancer_model.h5')
 
 # Algorithm to predict skin cancer
 def predict_Skin_Cancer(image_path):
-    # Your implementation here
-    pass
+    # Load your model
+    model_path = "../SkinCancer/skin_cancer_model.h5"
+    model = load_model(model_path)
+
+    # Define the input image size expected by your model
+    img_size = (224, 224)
+
+    # Load your image
+    image = Image.open(image_path)
+    image = image.resize((img_size[0], img_size[1]))  # Resize image to match model input size
+    image_array = np.array(image)
+
+    # Preprocess the image
+    preprocessed_image = preprocess_input(image_array)
+
+    # Add batch dimension as the model expects batches of images
+    preprocessed_image = np.expand_dims(preprocessed_image, axis=0)
+
+    # Make predictions
+    predictions = model.predict(preprocessed_image)
+
+    # Get the predicted class
+    predicted_class_index = np.argmax(predictions)
+    predicted_class = "Malignant" if predicted_class_index == 1 else "Benign"
+
+    return predicted_class
 
 # Algorithm to predict tuberculosis
 def predict_tuberculosis(image_path):
