@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Prediction</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #2c3e50, #3498db);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 600px;
+            padding: 40px;
+            background: rgba(152, 211, 208, 0.8); /* Semi-transparent white background */
+            border-radius: 20px;
+            margin: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+        h1.heading {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+        h2 {
+            color: #333333;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        .disease-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .disease-item {
+            background: #ecf0f1; /* Light gray background color */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .disease-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+        .disease-link {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+            border: 2px solid transparent;
+            padding: 10px 20px;
+            border-radius: 25px;
+        }
+        .disease-link:hover {
+            color: #1abc9c; /* Turquoise color */
+            border-color: #1abc9c;
+        }
+        .disease-link:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <h1 class='heading'>Health Prediction System</h1>
+    <div class="container">
+        <h2>Disease Prediction:</h2>
+        <ul class="disease-list">
+            <li class="disease-item"><a href="/upload" class="disease-link">Tuberculosis</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h2>Disease Prediction:</h2>
+        <ul class="disease-list">
+            <li class="disease-item"><a href="/upload_skin" class="disease-link">Skin Cancer</a></li>
+        </ul>
+    </div>
+</body>
+</html>
