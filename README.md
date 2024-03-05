@@ -18,22 +18,15 @@ To start the Flask server and run the skin cancer detection application, follow 
 
 1. Ensure you have Python installed on your system. If not, download and install Python from [Python Official Website](https://www.python.org/).
 
-2. Install the required Python dependencies by running the following command in your terminal or command prompt:
 
-    ```
-    pip install -r requirements.txt
-    ```
+2. Once the dependencies are installed, navigate to the project directory containing the Flask application.
 
-   This command will install all the necessary packages listed in the `requirements.txt` file.
-
-3. Once the dependencies are installed, navigate to the project directory containing the Flask application.
-
-4. Run the following command to start the Flask server:
+3. Run the following command to start the Flask server:
 
     ```
     python app.py
     ```
 
-5. Once the server starts successfully, you can access the skin cancer detection application by visiting `http://localhost:5000` in your web browser.
+4. Once the server starts successfully, you can access the skin cancer detection application by visiting `http://localhost:5000` in your web browser.
 
 Feel free to reach out if you encounter any issues or have any questions.
