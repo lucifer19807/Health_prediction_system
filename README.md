@@ -1,4 +1,4 @@
-# Skin Cancer Detection Model - Warning
+# Tuberculosis and Skin CancerDetection Model - Warning
 
 **Attention:** This project does not include the skin cancer detection model due to its size. To download the model, please follow the instructions below:
 
